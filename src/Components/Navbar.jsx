@@ -16,7 +16,7 @@ const Navbar = () => {
 
         {/* Navigation Links */}
         <ul className={`nav-links ${isOpen ? "open" : ""}`}>
-          <li><a href="#hero">HOME</a></li>
+          <li><a href="#hero" onClick={() => setIsOpen(false)}>HOME</a></li>
           <li><a href="#hero">ABOUT US</a></li>
           <li><a href="#products">PRODUCTS</a></li>
           <li><a href="#ingredients">INGREDIENTS</a></li>
@@ -30,11 +30,11 @@ const Navbar = () => {
         </div>
 
         {/* Hamburger */}
-        <div className="hamburger" onClick={() => setIsOpen(!isOpen)}>
-          <span className="bar"></span>
-          <span className="bar"></span>
-          <span className="bar"></span>
-        </div>
+      <div className="hamburger" onClick={() => setIsOpen(!isOpen)}>
+  <span className={isOpen ? "bar active" : "bar"}></span>
+  <span className={isOpen ? "bar active" : "bar"}></span>
+  <span className={isOpen ? "bar active" : "bar"}></span>
+</div>
 
       </div>
     </nav>
