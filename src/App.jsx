@@ -1,18 +1,24 @@
-import React from 'react'
+
+import React from "react";
+import Navbar from"./Components/Navbar";
+import Hero from "./Components/Hero";
+// import WhySection from "./Components/WhySection";
+import Ingredients from "./Components/Ingredients";
 import Header from "./Components/Header";
 import Footer from "./Components/Footer";
+import Products from "./Components/Products"
+import Product  from './Pages/Product';
 import Home from './Pages/Home';
 import About from './Pages/About';
-import Products from './Pages/Products';
 import Contact from './Pages/Contact';
-
+// import WhySection from "./Components/WhySectin.css";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 function App() {
   return (
     <>   
     <Router>
 
-      <Header/>
+      {/* <Header/> */}
 
       <Routes>
 
@@ -24,10 +30,15 @@ function App() {
 
         <Route path="/contact" element={<Contact />} />
 
-      </Routes>
-<Footer/>
+ </Routes>
     </Router>
-    
+         
+      <Navbar/>
+      <Hero />
+      {/* <Products /> */}
+      {/* <WhySection /> */}
+      <Ingredients/>
+<Footer/>
     
     </>
   )

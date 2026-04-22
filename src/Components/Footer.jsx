@@ -1,11 +1,11 @@
-import React from 'react'
+import React from "react";
 
-function Footer() {
+const Footer = () => {
   return (
-    <div>
-      
-    </div>
-  )
-}
+    <footer style={{ padding: "30px", textAlign: "center", background: "#333", color: "#fff" }}>
+      <p>© 2026 FITNASHTA. All rights reserved.</p>
+    </footer>
+  );
+};
 
-export default Footer
+export default Footer;

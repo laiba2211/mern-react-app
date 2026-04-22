@@ -1,0 +1,145 @@
+/* Remove default body margin */
+body {
+  margin: 0;
+  font-family: sans-serif;
+}
+
+/* ================= NAVBAR ================= */
+.navbar {
+  width: 100%;
+  background-color: #09533a;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
+}
+
+/* ================= CONTAINER ================= */
+.navbar-container {
+  width: 100%;
+  max-width: 1400px;        /* Professional center layout */
+  margin: 0 auto;
+  padding: 0 40px;
+  height: 90px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+}
+
+/* ================= LOGO ================= */
+.logo img {
+  height: 65px;
+  width: auto;
+  display: block;
+}
+
+/* ================= NAV LINKS ================= */
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 40px;                 /* Stable spacing */
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: #FBF6EF;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  position: relative;
+  transition: 0.3s ease;
+  white-space: nowrap;       /* Prevent breaking */
+  font-family:"DM Sans", sans-serif;
+}
+
+/* Hover underline animation */
+.nav-links li a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 0%;
+  height: 2px;
+  background-color: #d9a326;
+  transition: 0.3s ease;
+}
+
+.nav-links li a:hover::after {
+  width: 100%;
+}
+
+.nav-links li a:hover {
+  color: #d9a326;
+}
+
+/* ================= BUTTON ================= */
+.button-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.ord-btn {
+  background-color: #d9a326;
+  color: #fff;
+  padding: 10px 26px;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s ease;
+  white-space: nowrap;
+}
+
+.ord-btn:hover {
+  background-color: #c8921f;
+  transform: translateY(-2px);
+}
+
+/* ================= HAMBURGER ================= */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.bar {
+  width: 26px;
+  height: 3px;
+  background-color: #fff;
+  border-radius: 3px;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 992px) {
+
+  .nav-links {
+    position: absolute;
+    top: 90px;
+    right: 0;
+    background-color: #09533a;
+    width: 260px;
+    flex-direction: column;
+    padding: 30px;
+    gap: 25px;
+    transform: translateX(100%);
+    transition: 0.3s ease-in-out;
+  }
+
+  .nav-links.open {
+    transform: translateX(0);
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  .button-wrapper {
+    display: none;
+  }
+}
